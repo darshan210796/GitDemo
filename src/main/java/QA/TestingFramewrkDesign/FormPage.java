@@ -121,10 +121,25 @@ public void setActivity() {
 		driver.findElement(By.xpath("//android.widget.TextView[@text='"+countryName+"']")).click();
 		
 	}
+
+	public void setCountrySelection1(String countryName)
+	
+	{
+		countrySelection.click();
+		scrollToText(countryName);
+		driver.findElement(By.xpath("//android.widget.TextView[@text='"+countryName+"']")).click();
+		
+	}
 	
 	
 	
 	public ProductCatalogue submitForm()
+	{
+		shopButton.click();
+		return	new ProductCatalogue(driver);
+		
+	}
+	public ProductCatalogue submitForm1()
 	{
 		shopButton.click();
 		return	new ProductCatalogue(driver);
