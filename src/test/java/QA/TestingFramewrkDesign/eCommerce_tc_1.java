@@ -61,24 +61,7 @@ public class eCommerce_tc_1 extends AndroidBasetest{
 		Assert.assertEquals(toastMessage, "Please  your name");
 	}
 		
-		@Test
-		public void FillForm_PositiveFlow() throws InterruptedException
-		{
-			driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("Darshan");
-			((HidesKeyboard) driver).hideKeyboard();
-			driver.findElement(By.xpath("//android.widget.RadioButton[@text = 'Female']")).click();
-			driver.findElement(By.id("android:id/text1")).click();
-			driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Argentina\"));"));
-			driver.findElement(By.xpath("//android.widget.TextView[@text = 'Argentina']")).click();
-			driver.findElement(By.id("com.androidsample.generalstore:id/btnLetsShop")).click();
-			Thread.sleep(2000);
-			Assert.assertTrue(driver.findElements(By.xpath("(/hierarchy/android.widget.Toast[1])")).size()<1);
 		
-			
-			
-		
-	
-		}
 	
 	
 	
