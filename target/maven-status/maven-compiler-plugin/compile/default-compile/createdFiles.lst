@@ -1,0 +1,6 @@
+utils\AppiumUtils.class
+QA\TestingFramewrkDesign\FormPage.class
+utils\AndroidActions.class
+QA\TestingFramewrkDesign\CartPage.class
+QA\TestingFramewrkDesign\ProductCatalogue.class
+utils\AppiumUtils$1.class
