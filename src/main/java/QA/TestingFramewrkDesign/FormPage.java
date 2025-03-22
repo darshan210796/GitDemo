@@ -36,6 +36,8 @@ AppiumDriver driver1;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this); 
 		
 	}
+	
+	
 //public FormPage(AndroidDriver driver) {
 //    this.driver = driver;
 //    PageFactory.initElements(driver, this);
@@ -77,6 +79,13 @@ public void setActivity() {
 	
 	
 	public void setNameField(String name)
+	{
+		nameField.sendKeys(name);
+		((HidesKeyboard) driver).hideKeyboard();
+		
+	}
+	
+	public void setNameField1(String name)
 	{
 		nameField.sendKeys(name);
 		((HidesKeyboard) driver).hideKeyboard();
