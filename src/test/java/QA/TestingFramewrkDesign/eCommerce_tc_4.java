@@ -131,6 +131,23 @@ public void preSetup() {
     formPage.setActivity();  // This is where the failure occurs
 }
 
+public void preSetup1() {
+    System.out.println("Checking driver: " + (driver != null ? "Initialized" : "NULL"));
+
+    if (driver == null) {
+        throw new IllegalStateException("Driver is not initialized. Appium server may not be running.");
+    }
+
+    formPage = new FormPage(driver);
+    System.out.println("Checking formPage: " + (formPage != null ? "Initialized" : "NULL"));
+
+    if (formPage == null) {
+        throw new NullPointerException("FormPage object is null. Check if driver is properly initialized.");
+    }
+
+    formPage.setActivity();  // This is where the failure occurs
+}
+
 //@BeforeMethod (alwaysRun = true)
 //public void preSetup() {
 //    if (driver == null) {

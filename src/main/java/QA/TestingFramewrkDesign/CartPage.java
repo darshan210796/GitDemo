@@ -63,6 +63,19 @@ public class CartPage extends AndroidActions{
 			return totalSum;
 		}
 		
+		public double getProductsSum1()
+		{
+			int count = productList.size();
+			double totalSum = 0; 
+			for	(int i=0; i<count; i++)
+			{
+				String amountString = productList.get(i).getText();
+				Double price = getFormattedAmount(amountString);	
+				totalSum = totalSum + price; 
+			}
+			return totalSum;
+		}
+		
 		public Double getTotalAmountDisplayed()
 		{
 			return getFormattedAmount(totalAmount.getText());

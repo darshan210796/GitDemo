@@ -62,6 +62,21 @@ public class eCommerce_tc_1 extends AndroidBasetest{
 	}
 		
 		
+	@Test
+	public void FillForm_ErrorValidation1() throws InterruptedException
+	{
+	//	driver.findElement(By.id("com.androidsample.generalstore:id/nameField")).sendKeys("Darshan");
+		((HidesKeyboard) driver).hideKeyboard();
+		driver.findElement(By.xpath("//android.widget.RadioButton[@text = 'Female']")).click();
+		driver.findElement(By.id("android:id/text1")).click();
+		driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Argentina\"));"));
+		driver.findElement(By.xpath("//android.widget.TextView[@text = 'Argentina']")).click();
+		driver.findElement(By.id("com.androidsample.generalstore:id/btnLetsShop")).click();
+		Thread.sleep(2000);
+		String toastMessage = driver.findElement(By.xpath("(/hierarchy/android.widget.Toast[1])")).getAttribute("name");
+		Assert.assertEquals(toastMessage, "Please  your name");
+	}
+		
 	
 	
 	
